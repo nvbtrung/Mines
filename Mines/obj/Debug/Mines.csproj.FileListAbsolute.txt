@@ -1,0 +1,16 @@
+D:\Users\trung\source\repos\Mines\Mines\bin\Debug\Mines.exe.config
+D:\Users\trung\source\repos\Mines\Mines\bin\Debug\Mines.exe
+D:\Users\trung\source\repos\Mines\Mines\bin\Debug\Mines.pdb
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines.csprojResolveAssemblyReference.cache
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\MainWindow.g.cs
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\App.g.cs
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines_MarkupCompile.cache
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines_MarkupCompile.lref
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\MainWindow.baml
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines.g.resources
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines.Properties.Resources.resources
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines.csproj.GenerateResource.cache
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines.csproj.CoreCompileInputs.cache
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines.exe
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines.pdb
+D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines_Content.g.cs
