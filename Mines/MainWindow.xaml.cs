@@ -1,12 +1,11 @@
 ﻿using Mines.Class;
+using Mines.OptionWindow;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-using System.Windows.Automation.Peers;
 using System.Windows.Controls;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 
 namespace Mines
 {
@@ -41,27 +40,7 @@ namespace Mines
             //Initialiser les configurations du jeu
             row = col = 8;
             nbBomb = 10;
-            nResult = new Cell[row, col];
-
-            //Initialiser l'interface
-            Container.Background = Brushes.White;
-            Container.ShowGridLines = true;
-
-            //Ajouter des colognes
-            for (var i = 0; i < col; i++)
-            {
-                var colDef = new ColumnDefinition();
-                colDef.Width = new GridLength(1, GridUnitType.Star);
-                Container.ColumnDefinitions.Add(colDef);
-            }
-
-            //Ajouter des lignes            
-            for (var i = 0; i < row; i++)
-            {
-                var rowDef = new RowDefinition();
-                rowDef.Height = new GridLength(1, GridUnitType.Star);
-                Container.RowDefinitions.Add(rowDef);
-            }
+            
             NewGame();
         }
 
@@ -160,12 +139,51 @@ namespace Mines
             NewGame();
         }
 
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            Option window = new Option(row, col, nbBomb);
+            window.FormClosed += Settings_Close;
+            window.Show();            
+        }
+
+        private void Settings_Close(object sender, System.Windows.Forms.FormClosedEventArgs e)
+        {
+            Option window = (Option)sender;
+            col = window.getCol();
+            row = window.getRow();
+            nbBomb = window.getBomb();
+            NewGame();
+        }
         #endregion
 
         #region Function divers
         private void NewGame()
         {
             Container.Children.Clear();
+            Container.RowDefinitions.Clear();
+            Container.ColumnDefinitions.Clear();
+            nResult = new Cell[row, col];
+
+            //Initialiser l'interface
+            Container.Background = Brushes.White;
+            Container.ShowGridLines = true;
+
+            //Ajouter des colognes
+            for (var i = 0; i < col; i++)
+            {
+                var colDef = new ColumnDefinition();
+                colDef.Width = new GridLength(1, GridUnitType.Star);
+                Container.ColumnDefinitions.Add(colDef);
+            }
+
+            //Ajouter des lignes            
+            for (var i = 0; i < row; i++)
+            {
+                var rowDef = new RowDefinition();
+                rowDef.Height = new GridLength(1, GridUnitType.Star);
+                Container.RowDefinitions.Add(rowDef);
+            }
 
             endGame = false;
 
@@ -315,7 +333,8 @@ namespace Mines
             }
             else
             {
-                MessageBox.Show("You win");
+                if (Container.Children.Cast<Button>().ToList().Any(button => button.Background == Brushes.Orange))
+                    MessageBox.Show("You lose");
             }
         }
         #endregion

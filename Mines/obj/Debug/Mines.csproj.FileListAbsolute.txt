@@ -14,3 +14,4 @@ D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines.csproj.CoreCompileInputs
 D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines.exe
 D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines.pdb
 D:\Users\trung\source\repos\Mines\Mines\obj\Debug\Mines_Content.g.cs
+D:\users\trung\source\repos\Mines\Mines\obj\Debug\Mines.OptionWindow.Option.resources
